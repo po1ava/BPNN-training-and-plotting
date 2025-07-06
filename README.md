@@ -6,8 +6,8 @@
 在模型训练前，需要在 **train. py** 程序中设定数据读取范围以及神经网络模型的各个参数。训练程序默认设定为在一次执行中测试多种每层神经元数量，并将训练结果导出到同一个excel文件中。
 
 ```python 
-file_path = 'example_data.xlsx' # 读取数据的表格路径  
-input_column = [1, 3, 5, 7, 9] 	# 模型输入项所在的表格列数组  
+file_path = 'example_data.xlsx' 	# 读取数据的表格路径  
+input_column = [1, 3, 5, 7, 9] 		# 模型输入项所在的表格列数组  
 output_column = [10] 			# 模型输出项所在的表格列数组  
   
 units_min = 5 					# 训练中测试的每层最小神经元数量  
@@ -17,13 +17,13 @@ hidden_layer_num = 3 			# 模型中使用的隐藏层数量
 epoch_num = 1000 				# 模型的最大训练步数  
 log_length = 5 					# 记录一次R²数据的模型训练步数间隔  
   
-learning_rate = 0.005 			# 模型学习率  
-loss_function = 'mse' 			# 模型使用的损失函数  
+learning_rate = 0.005 				# 模型学习率  
+loss_function = 'mse' 				# 模型使用的损失函数  
 optimizer = optimizers.Adam(learning_rate=learning_rate) # 模型使用的优化器  
-activation = 'relu' 			# 除输出层外，其余层使用的激活函数  
-activation_output = activation 	# 模型输出层使用的激活函数  
-scaler = MinMaxScaler() 		# 预处理时使用的数据归一化方法  
-k_splits = 5 					# k-fold划分数量，也决定训练与测试集划分比例  
+activation = 'relu' 				# 除输出层外，其余层使用的激活函数  
+activation_output = activation 		# 模型输出层使用的激活函数  
+scaler = MinMaxScaler() 			# 预处理时使用的数据归一化方法  
+k_splits = 5 						# k-fold划分数量，也决定训练与测试集划分比例  
 k_splits_on = True 				# 是否执行k-fold交叉验证多次训练
 patience = 40 					# 验证集性能持续未改善时停止训练的连续记录次数  
   
