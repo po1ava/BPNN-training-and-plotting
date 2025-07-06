@@ -10,12 +10,12 @@ file_path = 'example_data.xlsx' 	# 读取数据的表格路径
 input_column = [1, 3, 5, 7, 9] 		# 模型输入项所在的表格列数组  
 output_column = [10] 			# 模型输出项所在的表格列数组  
   
-units_min = 5 					# 训练中测试的每层最小神经元数量  
-units_max = 25 					# 训练中测试的每层最大神经元数量(包含)  
-units_interval = 5 				# 训练中测试的神经元间隔数量  
+units_min = 5 				# 训练中测试的每层最小神经元数量  
+units_max = 25 				# 训练中测试的每层最大神经元数量(包含)  
+units_interval = 5 			# 训练中测试的神经元间隔数量  
 hidden_layer_num = 3 			# 模型中使用的隐藏层数量  
-epoch_num = 1000 				# 模型的最大训练步数  
-log_length = 5 					# 记录一次R²数据的模型训练步数间隔  
+epoch_num = 1000 			# 模型的最大训练步数  
+log_length = 5 				# 记录一次R²数据的模型训练步数间隔  
   
 learning_rate = 0.005 				# 模型学习率  
 loss_function = 'mse' 				# 模型使用的损失函数  
