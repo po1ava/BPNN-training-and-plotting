@@ -17,15 +17,15 @@ hidden_layer_num = 3 			# 模型中使用的隐藏层数量
 epoch_num = 1000 			# 模型的最大训练步数  
 log_length = 5 				# 记录一次R²数据的模型训练步数间隔  
   
-learning_rate = 0.005 				# 模型学习率  
-loss_function = 'mse' 				# 模型使用的损失函数  
+learning_rate = 0.005 			# 模型学习率  
+loss_function = 'mse' 			# 模型使用的损失函数  
 optimizer = optimizers.Adam(learning_rate=learning_rate) # 模型使用的优化器  
-activation = 'relu' 				# 除输出层外，其余层使用的激活函数  
+activation = 'relu' 			# 除输出层外，其余层使用的激活函数  
 activation_output = activation 		# 模型输出层使用的激活函数  
-scaler = MinMaxScaler() 			# 预处理时使用的数据归一化方法  
-k_splits = 5 						# k-fold划分数量，也决定训练与测试集划分比例  
-k_splits_on = True 				# 是否执行k-fold交叉验证多次训练
-patience = 40 					# 验证集性能持续未改善时停止训练的连续记录次数  
+scaler = MinMaxScaler() 		# 预处理时使用的数据归一化方法  
+k_splits = 5 				# k-fold划分数量，也决定训练与测试集划分比例  
+k_splits_on = True 			# 是否执行k-fold交叉验证多次训练
+patience = 40 				# 验证集性能持续未改善时停止训练的连续记录次数  
   
 log_name = f'{activation}_l{hidden_layer_num}' # 训练日志输出名称  
 model_name = log_name 			# 保存的最优模型文件输出名称
